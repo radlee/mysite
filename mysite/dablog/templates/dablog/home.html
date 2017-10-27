@@ -1,9 +1,36 @@
 {% extends 'dablog/index.html' %}
 
 {% block content %}
+{% include 'dablog/includes/navbar.html' %}
+<!-- {% include 'dablog/includes/jumbotron.html' %} -->
 
-<div class="">
-  <h2>Hey There {{name}}</h2>
+<div class="content">
+  <h1 style="text-align: center">Experiences with Django</h1>
+
+  <p>
+    Hello and welcome to my first installment of a Django WebApp Development. When I started this WebApp I was only doing it with
+    intentions of deploying if to heroku. I wanted to make it so simple that it wouldn't give me issues with databases and
+    dynos going to sleep and other issues I have not heard or read about concerning deploying to heroku for free. I have some
+    experience on deploying a WebApp on heroku and my one and olny <a href="http://lolito-mlab.herokuapp.com/" target="_blank">proof</a> is the
+    express app I created when I was an intern at <a href="https://www.mlab.co.za/" target="_blank">m-Lab</a> in hopes that it would be visited
+    and hopefully have some people asking me questions about the idea behind its existence. I guess I have a lot to learn about
+    Web Development and marketing.
+  </p>
+  <p>
+    Today <em>(27 October 2017)</em>, on the day of development, I have had some issues with using Bootstrap 4's nav on this WebApp. When I
+    resize the browser the menu does not toggle. I have included jQuery before other javascript files just befor the closing body tag.
+    Following that is Tether and then the minified js of bootstrap.
+  </p>
+  <p>
+    To test if I used the correct method of loading the static files I created a demo.js file inside js directory under static and I console logged
+    a 'Hello'. On page load under console it displays 'Hello', meaning that I referenced the js correctly. I also used the CDN for all the javascript
+    files I required but still nothing happens.
+  </p>
+  <p>
+    I am assuming this could be beacause of the machine from which I am developing, that after I deployed and tested the collapsable menu on
+    a different machine with a different browser that it may work. I am currently using Chromium, the outdated version on a Dell Inspiron M5040 :( .
+  </p>
 </div>
 
+{% include 'dablog/includes/footer.html' %}
 {% endblock %}
